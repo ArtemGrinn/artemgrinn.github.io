@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Artem Grinn&#39;s blog</title>
+    <description>A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France.</description>
+    <link>http://agrinn.ru/</link>
+    <atom:link href="http://agrinn.ru/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 18 Jan 2016 23:07:18 +0300</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2016 23:07:18 +0300</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Tips for Git users</title>
+        <description>&lt;p&gt;If you know nothing about Git, google it, this is not the right place to start learning Git. I wrote this article for developers who know already the basic Git usage and use Git as an important piece of workflow.&lt;/p&gt;
+
+&lt;h3 id=&quot;always-use-git-status&quot;&gt;Always use &lt;code&gt;git status&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;It’s good to start off using git with good habits. Using &lt;code&gt;git status&lt;/code&gt; to find where you are is one of them. The terminal’s output shows the actions you can do with the current status.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-want-see-a-list-of-details-of-my-last-n-commits&quot;&gt;I want see a list of details of my last N commits&lt;/h3&gt;
+
+&lt;p&gt;For example: to see your last 5 commits&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;git log -n 5 --author=Salvador
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want a simpler one line solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;git log --oneline -n 5 --author=Salvador
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you like the single line version, try creating an alias for git log like this (this is what I have for zsh)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;alias glog=&quot;git log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, I can just use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;glog -n 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And I get a nice output.&lt;/p&gt;
+
+&lt;p&gt;Which is colorized, shows the name of the author and also shows the graph and you can still pass in other flags (such as –author) which lets you filter it even more.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13542213/git-see-a-list-of-comments-of-my-last-n-commits#answer-13542327&quot;&gt;You can see the original answer here.&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 09 Dec 2015 00:00:00 +0300</pubDate>
+        <link>http://agrinn.ru/articles/2015-12/tips-for-Git-users</link>
+        <guid isPermaLink="true">http://agrinn.ru/articles/2015-12/tips-for-Git-users</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>My first Ruby on Rails project</title>
+        <description>&lt;p&gt;第一次接触到 Ruby 是为什么我已经不记得了，不，确切的说是知道了 Rails 先于 Ruby
+ （当时还不知道Ruby是一门语言）。之后，开始疯狂在 lynda 、 codecademy 和 codeschool 上看有关于 Ruby on Rails
+ 的视频和教程，去淘宝上买几十块钱一个月的 lynda 会员。但却迟迟不能入门。&lt;/p&gt;
+
+&lt;p&gt;之后可能是在知乎或是 Ruby China 上看到了 Michael hartl 的 Tutorial ，买了第三版，跟着教程一步一步敲代码。
+也是这本教程让我入门了很多 Web 以及应用开发的知识，让我受益良多。不过之后看到很多人对此书的评价，
+我也确实要良心的说一句，一开始学习 Rails 就接触边写应用边写测试会有点复杂，但是会让你明白一个系统的开发流程，
+这对我之后的学习也有很大的帮助，可以说这本书帮我真正敲开了 Rails 的大门。&lt;/p&gt;
+
+&lt;p&gt;大概学了将近大半年的时间后，我在巴黎找了一家设计公司实习，也敲出了第一个 Rails 的专案。我把 Staging 版本
+托管在 heroku 上，一来可以降低客户与我们的沟通成本，二来可以利用免费的 heroku 展示我的作品。如果有人感兴趣，
+可以点&lt;a href=&quot;https://msushi.herokuapp.com/&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;简单介绍一下这个专案吧，我用到了 devise 做前台的用户系统，一个开源的 Rails e-commerce 框架 shoppe 做后台，
+以及 foundation 5 来做响应式布局。这不算是一个成功的专案，它里面还有很多没解决的问题：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;比如 Shoppe 这个 gem
+已经提供了一套 customer 系统，在我用 devise 在前台创建用户的时候，我还不能很好的将这两者联系起来。&lt;/li&gt;
+  &lt;li&gt;比如新注册的用户，必须要填写个人信息才能点单、付款，但是这个逻辑我做的很粗糙。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不过我也是第一次深入了解了 gem 的运作原理，我把 ‘shoppe’ fork 到自己的 Github 代码仓库中做了很多自定义的改动来
+迎合客户的需求：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;增加了法语版的翻译&lt;/li&gt;
+  &lt;li&gt;优化了使用 roo 实现的通过 Excel 批量上传信息的功能&lt;/li&gt;
+  &lt;li&gt;修改了一些数据库栏位，以使得资料和信息更符合法国公司的使用习惯&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;用一个切实的专案来加强巩固自己的所学非常重要。所以，在结束实习之后，我开始折腾了自己的 Jekyll theme ，
+并取名 leonids ，意为“狮子座流星雨”，我就是狮子座的，所以有些自恋在所难免。&lt;/p&gt;
+
+&lt;p&gt;如你所见，这个博客就是用的 leonids ，如果你觉得还不错，欢迎来我的&lt;a href=&quot;https://github.com/renyuanz/leonids&quot;&gt;repo&lt;/a&gt;
+ fork 或 download 这个 theme ，如果能给我一个 star 就再好不过啦！&lt;/p&gt;
+
+&lt;p&gt;如果有任何问题或建议，可以给我&lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#122;&amp;#111;&amp;#117;&amp;#114;&amp;#101;&amp;#110;&amp;#121;&amp;#117;&amp;#097;&amp;#110;&amp;#064;&amp;#103;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;发邮件&lt;/a&gt;或是直接在页面下留言。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Sep 2015 00:00:00 +0300</pubDate>
+        <link>http://agrinn.ru/articles/2015-09/my-first-rails-project</link>
+        <guid isPermaLink="true">http://agrinn.ru/articles/2015-09/my-first-rails-project</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>New site new life</title>
+        <description>&lt;p&gt;I did finish my 3 months internship few weeks ago and I reworked my blog site during these holidays so that I won’t be boring.&lt;/p&gt;
+
+&lt;p&gt;I was thinking about to design my own Jekyll theme for a long time and I did finally achieve the goal, cheers! As you can see, this blog is my first github open source project and I got already 4 stars at the moment. Such an accomplishment! Therefor, I will keep working on this project and make it better. If you have any question or suggestion, feel free to leave a message here or &lt;a href=&quot;https://github.com/renyuanz/leonids/issues/new&quot;&gt;open an issue&lt;/a&gt; at Github, I will try my best to make this theme to be your best friend while you want write something down.&lt;/p&gt;
+
+&lt;p&gt;Look back into the last three months, it was a wonderful experience to work on what I really love. I did complete two projects, the first one is a presentation website for a Chinese air condition manufacturer – &lt;a href=&quot;http://www.veckchina.com&quot;&gt;VeckChina&lt;/a&gt;, and the second one is a ruby on rails e-commerce project for a Parisian restaurant – &lt;a href=&quot;https://msushi.herokuapp.com&quot;&gt;Msushi&lt;/a&gt;. I made a lot of progresses of coding skills and negotiation abilities. And I did learn what and how to do when there is a conflict between developer and designer or between customer and company.&lt;/p&gt;
+
+&lt;p&gt;Now it’s time to moving on, I am on the train to Marseille while writing this post. Hope everything will be ok.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Sep 2015 00:00:00 +0300</pubDate>
+        <link>http://agrinn.ru/articles/2015-09/New-site-new-life</link>
+        <guid isPermaLink="true">http://agrinn.ru/articles/2015-09/New-site-new-life</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>Customizing Your iTerm2</title>
+        <description>&lt;p&gt;Since we’re going to be spending a lot of time in the command-line, let’s install a better terminal than the default one.&lt;/p&gt;
+
+&lt;h4 id=&quot;are-you-looking-for-something-like-this&quot;&gt;Are you looking for something like this?&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://agrinn.ru/img/preview.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;iterm2&quot;&gt;iTerm2&lt;/h4&gt;
+
+&lt;p&gt;Download and install iTerm2 (the newest version, even if it says “beta release”).&lt;/p&gt;
+
+&lt;p&gt;In &lt;strong&gt;Finder&lt;/strong&gt;, drag and drop the &lt;strong&gt;iTerm&lt;/strong&gt; Application file into the &lt;strong&gt;Applications&lt;/strong&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;You can now launch iTerm, through the &lt;strong&gt;Launchpad&lt;/strong&gt; for instance.&lt;/p&gt;
+
+&lt;p&gt;Let’s just quickly change some preferences. In &lt;strong&gt;iTerm &amp;gt; Preferences…&lt;/strong&gt;, under the tab &lt;strong&gt;General&lt;/strong&gt;, uncheck &lt;strong&gt;Confirm closing multiple sessions&lt;/strong&gt; and &lt;strong&gt;Confirm “Quit iTerm2 (Cmd+Q)” command&lt;/strong&gt; under the section &lt;strong&gt;Closing&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the tab &lt;strong&gt;Profiles&lt;/strong&gt;, create a new one with the “+” icon, and rename it to your first name for example. Then, select &lt;strong&gt;Other Actions… &amp;gt; Set as Default&lt;/strong&gt;. Finally, under the section &lt;strong&gt;Window&lt;/strong&gt;, change the size to something better, like &lt;strong&gt;Columns: 125&lt;/strong&gt; and &lt;strong&gt;Rows: 35&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;When done, hit the red “X” in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.&lt;/p&gt;
+
+&lt;h4 id=&quot;beautiful-terminal&quot;&gt;Beautiful terminal&lt;/h4&gt;
+
+&lt;p&gt;Throughout a normal day, you’ll see your prompt thousands of times. Customizing it with relevant information can drastically improve your workflow.&lt;/p&gt;
+
+&lt;p&gt;Let’s go ahead and start by changing the font. In &lt;strong&gt;iTerm &amp;gt; Preferences…&lt;/strong&gt;, under the tab &lt;strong&gt;Profiles&lt;/strong&gt;, section &lt;strong&gt;Text&lt;/strong&gt;, change both fonts to &lt;strong&gt;Source Code Pro 13pt&lt;/strong&gt;. This font isn’t included in the default Mac font libary, so you have to download and install it.&lt;/p&gt;
+
+&lt;p&gt;Now let’s add some color. I’m a big fan of the &lt;strong&gt;Dracula&lt;/strong&gt; color scheme. I just find it pretty. There are so many alternatives such as &lt;strong&gt;solarized&lt;/strong&gt;, you can choose whatever you want.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/zenorocha/dracula-theme&quot;&gt;Download ZIP file&lt;/a&gt; from github repo. Unzip the archive. In it you will find the &lt;strong&gt;iterm&lt;/strong&gt; folder, but I will just walk you through it here:&lt;/p&gt;
+
+&lt;p&gt;In &lt;strong&gt;iTerm2 Preferences&lt;/strong&gt;, under &lt;strong&gt;Profiles&lt;/strong&gt; and &lt;strong&gt;Colors&lt;/strong&gt;, go to &lt;strong&gt;Load Presets… &amp;gt; Import…&lt;/strong&gt;, find and open the two &lt;strong&gt;.itermcolors&lt;/strong&gt; files we downloaded.
+Go back to &lt;strong&gt;Load Presets…&lt;/strong&gt; and select &lt;strong&gt;Dracula&lt;/strong&gt; to activate it. Voila!&lt;/p&gt;
+
+&lt;p&gt;Till now, we have finished the appearance of our iTerm2. Next step, we need to tweak a little bit our Unix user’s profile. This is done (on OS X and Linux), in the &lt;code&gt;~/.bash_profile&lt;/code&gt; text file (&lt;code&gt;~&lt;/code&gt; stands for the user’s home directory).&lt;/p&gt;
+
+&lt;p&gt;We’ll come back to the details of that later, but for now, just download the files &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile&quot;&gt;.bash_profile&lt;/a&gt;, &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt&quot;&gt;.bash_prompt&lt;/a&gt;, &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases&quot;&gt;.aliases&lt;/a&gt; into your home directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ cd ~
+$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile
+$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt
+$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;ls -lh&lt;/code&gt; (aliased to &lt;code&gt;ll&lt;/code&gt;), &lt;code&gt;ls -lha&lt;/code&gt; (aliased to &lt;code&gt;la&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;At this point you can also change your computer’s name, which shows up in this terminal prompt. If you want to do so, go to &lt;strong&gt;System Preferences &amp;gt; Sharing&lt;/strong&gt;. For example, I changed mine from “Renyuan’s MacBook Pro” to just “big-house”, so it shows up as “big-house” in the terminal.&lt;/p&gt;
+
+&lt;p&gt;Now we have a terminal we can work with!&lt;/p&gt;
+
+&lt;p&gt;(Thanks to Nicolas Hery for his &lt;a href=&quot;https://github.com/nicolashery/mac-dev-setup&quot;&gt;setup document&lt;/a&gt;)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Apr 2015 22:32:27 +0300</pubDate>
+        <link>http://agrinn.ru/articles/2015-04/customizing-your-iterm2</link>
+        <guid isPermaLink="true">http://agrinn.ru/articles/2015-04/customizing-your-iterm2</guid>
+        
+        <category>terminal</category>
+        
+        <category>iTerm2</category>
+        
+        <category>OS X</category>
+        
+        
+        <category>mac</category>
+        
+      </item>
+    
+  </channel>
+</rss>

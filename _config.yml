@@ -3,16 +3,19 @@
 # Site wide configuration
 ####################################
 #
-title:       "Renyuan's blog"
+title:       "Artem Grinn's blog"
 description: 'A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France.'
-url:         # the base hostname & protocol for your site
+url: "http://agrinn.ru"       # the base hostname & protocol for your site
 
+baseurl: ""
+twitter_username: a.grinn
+github_username:  ArtemGrinn
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Europe/Moscow
 markdown:          kramdown
 highlighter:       pygments
 excerpt_separator: <!--more-->
@@ -31,22 +34,22 @@ kramdown:
 ####################################
 #
 owner:
-  name: Renyuan
+  name: Artem Grinn
   avatar: avatar.jpg
-  job: "PHP & Ruby Developer"
-  bio: "A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France."
-  email: zourenyuan@gmail.com
-  disqus-shortname: renyuanzblog
-  twitter: alittlered3 #username
+  job: "ASP.NET MVC & JS Developer"
+  bio: "Fullstack web developer from Orel, Russia."
+  email: grinn.art@gmail.com
+
+  twitter: a.grinn #username
   facebook: #username
   google:
     plus: #username
-    analytics: UA-62251910-1
+    analytics: 
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: renyuanz #username
+  github: ArtemGrinn #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username

@@ -1,67 +1,42 @@
-#
-###################################
-# Site wide configuration
-####################################
-#
-title:       "Artem Grinn's blog"
-description: 'A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France.'
-url: "http://agrinn.ru"       # the base hostname & protocol for your site
+name: Your New Jekyll Site
+description: Blogging about stuffs
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
 
-baseurl: ""
-twitter_username: a.grinn
-github_username:  ArtemGrinn
-#
-###################################
-# Jekyll configuration
-####################################
-#
-timezone:          Europe/Moscow
-markdown:          kramdown
-highlighter:       pygments
-excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+aboutPage: true
 
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  enable_coderay: false
+markdown: redcarpet
+highlighter: pygments
 
-#
-###################################
-# Site Owner configuration
-####################################
-#
-owner:
-  name: Artem Grinn
-  avatar: avatar.jpg
-  job: "ASP.NET MVC & JS Developer"
-  bio: "Fullstack web developer from Orel, Russia."
-  email: grinn.art@gmail.com
+paginate: 20
+baseurl: /
+domain_name: 'http://yourblog-domain.com'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
 
-  twitter: a.grinn #username
-  facebook: #username
-  google:
-    plus: #username
-    analytics: 
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: ArtemGrinn #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+# Details for the RSS feed generator
+url:            'http://your-blog-url.example.com'
+author:         'Your Name'
+authorTwitter:  'YourTwitterUsername'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

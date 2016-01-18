@@ -17,7 +17,7 @@ disqus_shortname: 'your-disqus-shortname'
 # Details for the RSS feed generator
 url:            'http://agrinn.ru'
 author:         'Artem Grinn'
-authorTwitter:  'a.grinn'
+authorTwitter:  'grinn57'
 
 permalink:       /:year/:title/
 

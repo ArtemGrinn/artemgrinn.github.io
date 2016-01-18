@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Artem Grinn Pages 
+description: "Blogging about web development: JS, C#, ASP.NET MVC"
+meta_description: "Blogging about web development: JS, C#, ASP.NET MVC"
 
 aboutPage: true
 
@@ -9,15 +9,15 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'http://agrinn.ru'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
-author:         'Your Name'
-authorTwitter:  'YourTwitterUsername'
+url:            'http://agrinn.ru'
+author:         'Artem Grinn'
+authorTwitter:  'a.grinn'
 
 permalink:       /:year/:title/
 

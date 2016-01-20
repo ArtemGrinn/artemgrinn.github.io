@@ -6,6 +6,6 @@ profile: true
 
 Hello!  
 
-I'm professional ASP.NET MVC & JS TypeScript web developer from Orel, Russia.
+I'm professional web developer from Orel, Russia.
 
 {% include footer.html %}

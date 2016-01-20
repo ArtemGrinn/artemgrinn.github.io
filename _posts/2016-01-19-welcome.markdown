@@ -5,13 +5,12 @@ description: First topic
 ---
 
 Hello!  
-Привет!
-
 My name is Artem Grinn.  
-Меня зовут Артём Гринн.
-
 This blog about web development, and [about me][about].  
-Этот блог о веб разработке, и [обо мне][about].
+
+[ Привет!  
+Меня зовут Артём Гринн.  
+Этот блог о веб разработке, и [обо мне][about]. ]
 
 Im from Russia, and my English is not good =), so many posts I will written in Russian.
 

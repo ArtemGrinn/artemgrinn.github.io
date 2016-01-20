@@ -16,7 +16,7 @@ This blog about web development, and [about me][about].
 Im from Russia, and my English is not good =), so many posts I will written in Russian.
 
 The posts in the blog will contain pieces of code, like this:
-{% highlight cs %}
+{% highlight c# %}
 using System;
 
 #pragma warning disable 414, 3021

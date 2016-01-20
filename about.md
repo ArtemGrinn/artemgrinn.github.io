@@ -4,7 +4,7 @@ permalink: about/
 profile: true
 ---
 
-# Hello!
+# Hello!  
 ### I'm professional ASP.NET MVC & JS TypeScript web developer from Orel, Russia.
 
 {% include footer.html %}

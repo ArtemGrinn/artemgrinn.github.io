@@ -16,8 +16,7 @@ The posts in the blog will contain pieces of code, like this:
 {% highlight c# %}
    public ActionResult Rating()
         {             
-            var MonthRating = from u in dataContext.Users
-                                   orderby u.Likes.Count(l => l.Moderated && l.CreatedAt.Year == DateTime.Today.Year && l.CreatedAt.Month == DateTime.Today.Month) descending
+            var MonthRating = from u in dataContext.Users                                   
                                    where u.Likes.Count(l => l.Moderated && l.CreatedAt.Year == DateTime.Today.Year && l.CreatedAt.Month == DateTime.Today.Month) > 0
                                    select u;
 

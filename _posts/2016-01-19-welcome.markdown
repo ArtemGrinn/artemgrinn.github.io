@@ -4,45 +4,60 @@ date:   2016-01-19 10:18:00
 description: First topic
 ---
 
-Hello!  
-My name is Artem Grinn.  
+Welcome! 
 This blog about web development, and [about me][about].  
 
-[ Привет!  
-Меня зовут Артём Гринн.  
+[ Добро пожаловать!   
 Этот блог о веб разработке, и [обо мне][about]. ]
 
 Im from Russia, and my English is not good =), so many posts I will written in Russian.
 
 The posts in the blog will contain pieces of code, like this:
 {% highlight c# %}
-using System;
+   public ActionResult Rating()
+        {             
+            var MonthRating = from u in dataContext.Users
+                                   orderby u.Likes.Count(l => l.Moderated && l.CreatedAt.Year == DateTime.Today.Year && l.CreatedAt.Month == DateTime.Today.Month) descending
+                                   where u.Likes.Count(l => l.Moderated && l.CreatedAt.Year == DateTime.Today.Year && l.CreatedAt.Month == DateTime.Today.Month) > 0
+                                   select u;
 
-/// <summary>Main task</summary>
-async Task<int> AccessTheWebAsync()
-{
-    Console.WriteLine("Hello, World!");
-    string urlContents = await getStringTask;
-    return urlContents.Length;
-}
+            return View(MonthRating);
+        }
 {% endhighlight %}
 
 or this:
 
 {% highlight javascript %}
-function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) + 
-             ' class=""';
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      return /\d+[\s/]/g;
-  }
-}
+// Simple datepicker
+// Author: Artem Grinn, grinn.art@gmail.com
+var DatePicker = (function () {
+    function DatePicker(element) {   
+        this.inputElement = element;
+        this.now = new Date();
+        this.month = this.now.getMonth();
+        this.year = this.now.getFullYear();
+        this.today = new Date(this.now.getFullYear(), this.now.getMonth(), this.now.getDate());
+        this.container = document.createElement("div");
+        this.container.classList.add("datepicker");
+        this.container.classList.add("hide");
+        this.inputElement.parentNode.insertBefore(this.container, this.inputElement.nextSibling);
+    }
+    DatePicker.prototype.Close = function () {
+        if (!this.container.classList.contains("hide"))
+            this.container.classList.add("hide");
+    };
+    DatePicker.prototype.InputEventHandler = function () {
+        var _this = this;
+        this.inputElement.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var top = _this.inputElement.offsetTop;
+            var left = _this.inputElement.offsetLeft;
+            var height = _this.inputElement.offsetHeight;
+            _this.container.style.top = (top + height) + "px";
+            _this.container.style.left = left + "px";
+            _this.container.classList.toggle("hide");
+        });
+    };
 {% endhighlight %}
 
 I hope it will be interesting... Lets start!

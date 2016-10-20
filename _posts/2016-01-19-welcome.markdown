@@ -1,5 +1,5 @@
 ---
-title:  "Welcome! => Добро пожаловать!"
+title:  "Welcome && добро пожаловать!"
 date:   2016-01-19 10:18:00
 description: First topic
 ---

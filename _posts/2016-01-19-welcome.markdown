@@ -6,11 +6,9 @@ description: First topic
 
 Hello! 
 This blog about web development and focused on magic of JavaScript.  
-
 Im from Russia, and my English is not good. But I will try.
 
 The posts in the blog will contain pieces of code, like this:
-
 [JavaScript]
 {% highlight js %}
  var a = 0;
@@ -19,7 +17,6 @@ The posts in the blog will contain pieces of code, like this:
 {% endhighlight %}
 
 or this:
-
 [C#]
 {% highlight c# %}
 public ActionResult Rating()

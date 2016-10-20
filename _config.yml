@@ -1,10 +1,9 @@
-name: Grinn Pages 
+name: Artem Grinn 
 description: "JS TypeScript & ASP.NET MVC Developer"
-meta_description: "Blogging about web development: C#, JS, TypeScript, ASP.NET MVC 6"
+meta_description: "Blogging about web development: JavaScript, TypeScript, C#, ASP.NET MVC"
 
 aboutPage: true
 
-markdown: redcarpet
 highlighter: pygments
 
 paginate: 20

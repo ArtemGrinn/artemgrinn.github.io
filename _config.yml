@@ -4,7 +4,7 @@ meta_description: "Blogging about web development: JavaScript, TypeScript, C#, A
 
 aboutPage: true
 
-highlighter: pygments
+highlighter: rouge
 
 paginate: 20
 baseurl: /

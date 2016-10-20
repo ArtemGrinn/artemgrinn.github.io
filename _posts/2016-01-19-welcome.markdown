@@ -10,6 +10,17 @@ This blog about web development and focused on magic of JavaScript.
 Im from Russia, and my English is not good. But I will try.
 
 The posts in the blog will contain pieces of code, like this:
+
+[JavaScript]
+{% highlight js %}
+ var a = 0;
+ while (a != 1) a += 0.1;
+ console.log(a);
+{% endhighlight %}
+
+or this:
+
+[C#]
 {% highlight c# %}
 public ActionResult Rating()
 {             
@@ -23,41 +34,4 @@ public ActionResult Rating()
 }
 {% endhighlight %}
 
-or this:
-
-{% highlight js %}
-// Simple datepicker
-// Author: Artem Grinn, grinn.art@gmail.com
-var DatePicker = (function () {
-    function DatePicker(element) {   
-        this.inputElement = element;
-        this.now = new Date();
-        this.month = this.now.getMonth();
-        this.year = this.now.getFullYear();
-        this.today = new Date(this.now.getFullYear(), this.now.getMonth(), this.now.getDate());
-        this.container = document.createElement("div");
-        this.container.classList.add("datepicker");
-        this.container.classList.add("hide");
-        this.inputElement.parentNode.insertBefore(this.container, this.inputElement.nextSibling);
-    }
-    DatePicker.prototype.Close = function () {
-        if (!this.container.classList.contains("hide"))
-            this.container.classList.add("hide");
-    };
-    DatePicker.prototype.InputEventHandler = function () {
-        var _this = this;
-        this.inputElement.addEventListener("click", function (e) {
-            e.stopPropagation();
-            var top = _this.inputElement.offsetTop;
-            var left = _this.inputElement.offsetLeft;
-            var height = _this.inputElement.offsetHeight;
-            _this.container.style.top = (top + height) + "px";
-            _this.container.style.left = left + "px";
-            _this.container.classList.toggle("hide");
-        });
-    };
-{% endhighlight %}
-
 I hope it will be interesting... Lets start!
-
-[about]:    /about

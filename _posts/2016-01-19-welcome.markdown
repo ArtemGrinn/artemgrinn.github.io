@@ -1,16 +1,13 @@
 ---
-title:  "Welcome || добро пожаловать!"
+title:  "Welcome || Добро пожаловать!"
 date:   2016-01-19 10:18:00
 description: First topic
 ---
 
 Welcome! 
-This blog about web development, and [about me][about].  
+This blog about web development and focused on magic of JavaScript.  
 
-[ Добро пожаловать!   
-Этот блог о веб разработке, и [обо мне][about]. ]
-
-Im from Russia, and my English is not good =), so many posts I will written in Russian.
+Im from Russia, and my English is not good. But I will try.
 
 The posts in the blog will contain pieces of code, like this:
 {% highlight c# %}
@@ -28,7 +25,7 @@ public ActionResult Rating()
 
 or this:
 
-{% highlight javascript %}
+{% highlight js %}
 // Simple datepicker
 // Author: Artem Grinn, grinn.art@gmail.com
 var DatePicker = (function () {

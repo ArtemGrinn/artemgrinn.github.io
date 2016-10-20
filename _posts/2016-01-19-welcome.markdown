@@ -4,7 +4,7 @@ date:   2016-01-19 10:18:00
 description: First topic
 ---
 
-Welcome! 
+Hello! 
 This blog about web development and focused on magic of JavaScript.  
 
 Im from Russia, and my English is not good. But I will try.

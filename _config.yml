@@ -18,7 +18,7 @@ url:            'http://agrinn.ru'
 author:         'Artem Grinn'
 authorTwitter:  'grinn57'
 
-permalink:       /:year/:title/
+permalink:       /blog/:year/:title/
 
 defaults:
     -

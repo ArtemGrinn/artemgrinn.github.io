@@ -123,14 +123,14 @@ nav.main-nav {
 
 nav.main-nav a {
 	padding: 8px 12px;
-	color: #5badf0;
+	color: #000;
 	font-size: 18px;
 	line-height: 1.35;
 	border-radius: 3px;
 
 }
 nav.main-nav a:hover{
-	color: #000;
+	color: #5badf0;	
 }
 nav.main-nav a .fa{
 	font-size: 26px;

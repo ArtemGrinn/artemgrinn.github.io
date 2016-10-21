@@ -116,14 +116,12 @@ nav.main-nav {
 	background: #fff;
 	background: rgba(255,255,255,.90);
 	margin: 0 auto;
-	text-align: right;
+    	text-align: right;
 	/*position: fixed;*/
 	z-index: 100;
 }
 
 nav.main-nav a {
-	top: 8px;
-	right: 6px;
 	padding: 8px 12px;
 	color: #5badf0;
 	font-size: 18px;
@@ -131,8 +129,12 @@ nav.main-nav a {
 	border-radius: 3px;
 
 }
+nav.main-nav a:hover{
+	color: #000;
+}
 nav.main-nav a .fa{
-	font-size: 22px;
+	font-size: 26px;
+    	vertical-align: bottom;
 }
 nav.main-nav a.cta {
 	background: #5badf0;

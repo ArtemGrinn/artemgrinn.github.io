@@ -1,13 +1,14 @@
 <nav class="main-nav">
-    <a href="https://github.com/ArtemGrinn" title="My Github"> <i class="fa fa-github" aria-hidden="true"></i> </a>
-    <a href="https://twitter.com/grinn57" title="My Twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+    
     {% if page.url != "/" %}
-        <a href="{{ site.baseurl }}" title="Home"> <i class="fa fa-home" aria-hidden="true"></i> </a>
+        <a href="{{ site.baseurl }}" title="Home"> Home </a>
     {% endif %}
 
     {% if page.url != "/blog/" %}
         {% if site.aboutPage %}
-            <a href="{{ site.baseurl }}blog" title="My Blog"> <i class="fa fa-book" aria-hidden="true"></i> </a>
+            <a href="{{ site.baseurl }}blog" title="My Blog"> Blog </a>
         {% endif %}
     {% endif %}
+    <a href="https://github.com/ArtemGrinn" title="My GitHub"> <i class="fa fa-github" aria-hidden="true"></i> </a>
+    <a href="https://twitter.com/grinn57" title="My Twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
 </nav>

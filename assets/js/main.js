@@ -22,15 +22,15 @@ function retina() {
 	if (!isRetina())
 		return;
 	
-	$("img.2x").map(function(i, image) {
+	[].forEach.call(document.querySelectorAll("img.2x"), function(image) {
 		
-		var path = $(image).attr("src");
+		var path = image.getAttribute("src");
 		
 		path = path.replace(".png", "@2x.png");
 		path = path.replace(".jpg", "@2x.jpg");
 		
-		$(image).attr("src", path);
+		image.setAttribute("src", path);
 	});
 };
  
-$(document).ready(retina);
+window.addEventListener("load", retina);

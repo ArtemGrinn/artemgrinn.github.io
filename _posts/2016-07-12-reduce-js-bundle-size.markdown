@@ -1,3 +1,6 @@
+--Webpack plugins for reduce js bundle size
+
+{% highlight js %}
 plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -8,3 +11,4 @@ plugins: [
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
   ]
+{% endhighlight %}

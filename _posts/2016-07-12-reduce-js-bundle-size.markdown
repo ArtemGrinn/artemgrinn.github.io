@@ -1,9 +1,8 @@
 ---
-title:  "Reducing javascript bundle file size via Webpack"
+title:  "Reducing JS bundle size via Webpack"
 date:   2016-12-07 10:18:00
-description: Webpack plugins for reduce js bundle size
+description: Webpack plugins for reduce JavaScript bundle size
 ---
-=Webpack plugins for reduce js bundle size=
 
 {% highlight js %}
 plugins: [

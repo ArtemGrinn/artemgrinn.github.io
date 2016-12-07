@@ -4,7 +4,7 @@ profile: true
 
 # HELLO!
 
-## My name is Artem, and I'm web developer.
+### My name is Artem, and I'm web developer.
 
 I have over 5 years experience in web development. Can quickly solve various problems of websites powered by ASP.NET MVC, PHP, WordPress, OpenCart, BMShop and others. Can create and deploy fully functional web applications for business.
 

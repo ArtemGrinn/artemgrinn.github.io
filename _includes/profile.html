@@ -1,10 +1,8 @@
 <div class="profile">
     <section id="wrapper">
         <header id="header">
-        {% if site.aboutPage %}
-            <a href="{{ site.baseurl }}about">
-                <img id="avatar" class="2x" src="{{ site.baseurl }}assets/images/avatar.png"/>
-            </a>
+        {% if site.aboutPage %}            
+            <img id="avatar" class="2x" src="{{ site.baseurl }}assets/images/avatar.png"/>            
         {% else %}
             <img id="avatar" class="2x" src="{{ site.baseurl }}assets/images/avatar.png"/>
         {% endif %}

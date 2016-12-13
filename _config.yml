@@ -9,7 +9,7 @@ highlighter: rouge
 paginate: 20
 baseurl: /
 domain_name: 'http://agrinn.ru'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-88958543-1'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
 

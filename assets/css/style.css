@@ -186,7 +186,7 @@ a,
 }
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside; }
+li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}
 
 /* Line Height */
 #post-body, p { line-height:1.7; }

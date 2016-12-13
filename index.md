@@ -11,6 +11,7 @@ have over 6 years experience in web development.
 ReactJS, ES2016, TypeScript, ASP.NET MVC C#, HTML5, CSS3 (SCSS), PHP (and many CMS), a little bit RubyOnRails and Python (Django).
 
 # PROJECTS & WORKS
-- http://travel.payps.ru - ReactJS single page application for air ticket sales
-- http://www.docsvision.com/products/legkiy-klient/ - Document and Task Management System
-- http://oorel.ru - Twitter news agregator, pet project for fun
+
+- [travel.payps.ru](http://travel.payps.ru) - ReactJS single page application for air ticket sales
+- [docsvision.com](http://www.docsvision.com/products/legkiy-klient/) - Document and Task Management System
+- [oorel.ru](http://oorel.ru) - Twitter news agregator, pet project for fun

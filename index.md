@@ -2,7 +2,7 @@
 profile: true
 ---
 
-# ✌HELLO!
+# ✌ HELLO!
 
 My name is Artem, and I'm web developer, idea's generator, life improver and Internet extender. Today focusing on ReactJS, but
 have over 6 years experience in web development. 

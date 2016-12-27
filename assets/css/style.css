@@ -264,7 +264,7 @@ em, i { font-style: italic; }
 	max-width: 400px;
     	margin: -10px 0 15px 0;
 }
-.post-content a {
+.post-list .post-content a {
 	font-size: 16px;
 }
 

@@ -42,7 +42,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .icon-facebook-rect:before { content: '\e803'; }
 
 /* Spacing */
-.post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
+.post h1, h3, h4, h5, p, .post-body ul, .post-list li, pre {
 margin-bottom: 20px;
 }
 
@@ -168,8 +168,8 @@ nav.main-nav a.cta {
 /*Accent color*/
 a,
 #title,
-#post-list a:hover,
-#post-list li:hover .dates,
+.post-list a:hover,
+.post-list li:hover .dates,
 #title:hover {
 	text-decoration: none;
 	color: #008232;
@@ -180,7 +180,7 @@ p a { color: #008232; }
 /*Transitions*/
 a,
 #post-nav a,
-#post-list a	{
+.post-list a	{
 	-webkit-transition: all 0.15s ease;
 	-moz-transition: all 0.15s ease;
 	-ms-transition: all 0.15s ease;
@@ -258,7 +258,7 @@ em, i { font-style: italic; }
 	  display: inline-block;
 }
 
-#post-list h2 {
+.post-list h2 {
 	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color: #aaa;
 	max-width: 400px;
@@ -380,30 +380,30 @@ img {
 /*=========================================
 Post List
 =========================================== */
-#post-list,#archive-list {
+.post-list,#archive-list {
 	margin-top: 100px;
 }
 
-#post-list li,#archive-list li {
+.post-list li,#archive-list li {
 	list-style-type: none;
 }
 
-#post-list li:last-child {
+.post-list li:last-child {
 	margin-bottom: 0;
 }
 
-#post-list li+li {
+.post-list li+li {
 	padding-top: 20px;
 	border-top: 1px solid #eee;
 }
 
-#post-list a {
+.post-list a {
 	color: #333;
 	display: block;
 	font: bold 32px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
 }
 
-#post-list .dates {
+.post-list .dates {
 	float: right;
 	position: relative;
 	top: 7px;
@@ -597,22 +597,22 @@ h2.month {
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
-#post-list.archive.readmore h3{
+.post-list.archive.readmore h3{
 
 	  font: 400 20px "Helvetica Neue", Helvetica,Arial,sans-serif;
 	  margin-bottom: 30px;
 }
 
-#post-list.archive.readmore a{
+.post-list.archive.readmore a{
 	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
 	color: #008232;
 }
 
-#post-list.archive.readmore a:hover{
+.post-list.archive.readmore a:hover{
 	opacity: 0.8;
 }
 
-#post-list.archive.readmore .dates{
+.post-list.archive.readmore .dates{
 	font: 300 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
 }
 #sharing a.facebook {
@@ -639,11 +639,11 @@ h2.month {
 	.post { margin: 40px 0; }
 	#footer { margin-top: 60px; }
 
-	#post-list, #archive-list { margin-top: 0; }
+	.post-list, #archive-list { margin-top: 0; }
 	#post-meta { margin-top: 60px; }
 
 	#title { font-size: 17px; }
-	#post-list .dates { display: none; }
+	.post-list .dates { display: none; }
 
 	#post-list-footer { margin-top: 20px; padding-top: 40px; }
 

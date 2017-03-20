@@ -11,7 +11,7 @@ ReactJS, ES2016, TypeScript, ASP.NET MVC C#, HTML5, CSS3 (SCSS), PHP (and many C
 
 # PROJECTS & WORKS
 
-- [travel.payps.ru](http://travel.payps.ru) - ReactJS single page application for air ticket sales
-- [docsvision.com](http://www.docsvision.com/products/legkiy-klient/) - Document and task management system
+- [travel.payps.ru](http://travel.payps.ru) - single page application for air ticket sales powered by ReactJS
+- [docsvision.com](http://www.docsvision.com/products/legkiy-klient/) - document and task management system
 - [oorel.ru](http://oorel.ru) - Twitter news agregator, pet project for fun =)
-- [avto-57.ru](http://avto-57.ru) - City auto project
+- [avto-57.ru](http://avto-57.ru) - city car portal

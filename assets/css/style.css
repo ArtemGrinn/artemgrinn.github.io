@@ -167,6 +167,8 @@ nav.main-nav a.cta {
 .home img{
 	width: auto;
 	height: 20px;	
+	vertical-align: top;
+    	margin-left: 5px;
 }
 
 /* Typography */

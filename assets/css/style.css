@@ -165,6 +165,7 @@ nav.main-nav a.cta {
 }
 
 .home img{
+	width: auto;
 	height: 20px;	
 }
 

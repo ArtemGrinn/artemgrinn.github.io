@@ -202,6 +202,9 @@ li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}
 
 /* Line Height */
 #post-body, p { line-height:1.5; }
+p:before{
+	content: " ";	
+}
 
 b, strong { font-weight: 500;
   color: #1E2025; }

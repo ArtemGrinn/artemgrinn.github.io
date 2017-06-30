@@ -206,6 +206,7 @@ p:before{
 	content: " ";
 	display: inline-block;
 	margin-left: 50px;
+    	text-align: justify;
 }
 
 b, strong { font-weight: 500;

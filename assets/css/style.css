@@ -153,8 +153,10 @@ nav.main-nav a.cta {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
+	font-family: Georgia;
 	font-weight: 300;
-    	letter-spacing: 0.03em;
+        font-size: 24px;
+    	letter-spacing: -.003em;
 }
 
 .home #avatar {

@@ -169,7 +169,7 @@ nav.main-nav a.cta {
 .home img{
 	width: auto;
 	height: 20px;	
-	vertical-align: top;
+	vertical-align: baseline;
     	margin-left: 5px;
 }
 

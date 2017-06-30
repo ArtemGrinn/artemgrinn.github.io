@@ -51,7 +51,7 @@ html, body { height: 100%; }
 
 body {
 	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
+	color: #555;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -144,18 +144,18 @@ nav.main-nav a.cta {
 }
 
 #wrapper {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
 
 #wrapper.home {
-	max-width: 800px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 	font-family: Georgia;
 	font-weight: 300;
-        font-size: 24px;
+        font-size: 22px;
     	letter-spacing: -.003em;
 }
 
@@ -201,7 +201,7 @@ ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}
 
 /* Line Height */
-#post-body, p { line-height:1.7; }
+#post-body, p { line-height:1.5; }
 
 b, strong { font-weight: 500;
   color: #1E2025; }

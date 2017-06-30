@@ -203,7 +203,9 @@ li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}
 /* Line Height */
 #post-body, p { line-height:1.5; }
 p:before{
-	content: " ";	
+	content: " ";
+	display: inline-block;
+	margin-left: 50px;
 }
 
 b, strong { font-weight: 500;

@@ -157,6 +157,7 @@ nav.main-nav a.cta {
 	font-weight: 300;
         font-size: 22px;
     	letter-spacing: -.003em;
+	text-align: justify;
 }
 
 .home #avatar {
@@ -205,8 +206,7 @@ li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}
 p:before{
 	content: " ";
 	display: inline-block;
-	margin-left: 50px;
-    	text-align: justify;
+	margin-left: 50px;    	
 }
 
 b, strong { font-weight: 500;

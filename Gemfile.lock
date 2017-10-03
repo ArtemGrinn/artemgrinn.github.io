@@ -87,6 +87,8 @@ GEM
     jekyll-seo-tag (0.1.4)
       jekyll (>= 2.0)
     jekyll-sitemap (0.9.0)
+    jekyll-tagging (1.1.0)
+      nuggets
     jekyll-watch (1.3.0)
       listen (~> 3.0)
     jemoji (0.5.0)
@@ -107,6 +109,7 @@ GEM
     net-dns (0.8.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    nuggets (1.5.0)
     octokit (4.2.0)
       sawyer (~> 0.6.0, >= 0.5.3)
     parslet (1.5.0)
@@ -141,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-tagging
 
 BUNDLED WITH
-   1.11.2
+   1.15.4

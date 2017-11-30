@@ -18,7 +18,6 @@ function isRetina() {
  
  
 function retina() {
-	
 	if (!isRetina())
 		return;
 	

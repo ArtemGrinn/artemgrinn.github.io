@@ -1,9 +1,28 @@
 <html>
 <head>
 <title>Test ES6</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    progress {
+      background-color: #fff;
+      border: 0;
+      height: 44px;
+      width: 100%;
+    }
+    progress::-webkit-progress-bar {
+      background-color: #fff;
+    }
+    progress::-webkit-progress-value {
+      background-color: #f4d723;
+    }
+  </style>
 </head>
 <body>
   <div id="test"></div>
   <script src="es6test.js"></script>
+  <br/><br/><br/>
+  <progress min="0" max="100" value="20"></progress>
 </body>
 </html>

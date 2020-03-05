@@ -30,4 +30,4 @@ const linkedList = {
 };
 const reversedList = reverseLinkedList(linkedList);
 for (item in reversedList)
-  console.log(item.value);
+  console.log(reversedList[item]);

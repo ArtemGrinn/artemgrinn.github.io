@@ -12,9 +12,7 @@ function reverseLinkedList(curr, prev) {
     return prev;
   let currNext = curr.next;
   curr.next = prev;
-  let reversedList = reverseLinkedList(currNext, curr);
-  console.log(reversedList.value);
-  return reversedList;
+  return reversedList = reverseLinkedList(currNext, curr);  
 }
 
 const linkedList = {
@@ -31,3 +29,5 @@ const linkedList = {
     }
 };
 const reversedList = reverseLinkedList(linkedList);
+for (item in reversedList)
+  console.log(item.value);

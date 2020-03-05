@@ -14,6 +14,12 @@ function reverseLinkedList(curr, prev) {
   curr.next = prev;
   return reverseLinkedList(currNext, curr);  
 }
+function printLinkedList(list, printer) {  
+  printer(list.value);
+  if (list.next == null)
+    return;
+  printLinkedList(list.next, printer);
+}
 
 const linkedList = {
     value: 1,
@@ -28,6 +34,5 @@ const linkedList = {
         }
     }
 };
-const reversedList = reverseLinkedList(linkedList);
-for (item in reversedList)
-  console.log(reversedList[item]);
+
+printLinkedList(reverseLinkedList(linkedList), console.log);

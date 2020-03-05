@@ -12,7 +12,7 @@ function reverseLinkedList(curr, prev) {
     return prev;
   let currNext = curr.next;
   curr.next = prev;
-  return reversedList = reverseLinkedList(currNext, curr);  
+  return reverseLinkedList(currNext, curr);  
 }
 
 const linkedList = {

@@ -6,9 +6,6 @@ window.addEventListener("load", function () {
   document.getElementById("test").innerHTML = str;
 });
 
-window.onerror = function (msg, url, line, col, obj) {
-  alert(msg + '->' + navigator.userAgent + ' -> ' + url + " : " + line + "," + col + " " + (obj ? obj.stack : obj));     
-};
 
 function reverseLinkedList(curr, prev) {
   if (curr == null)

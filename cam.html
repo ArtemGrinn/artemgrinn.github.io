@@ -40,11 +40,12 @@
 			const button = document.querySelector('#start');  
 		   	button.onclick = () => {
 		   		video.play();
-		   		alert("Started");
+		   		console.log("Started");
 		   	};
  			const go = async () => {
 			  	const devices = await navigator.mediaDevices.enumerateDevices();
 	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
+				alert(JSON.stringify(videoDevices));
 	  			if (videoDevices.length === 0){
 	  				console.log("Video devices not found");
 	  				return;

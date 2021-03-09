@@ -56,16 +56,16 @@
 			};
 		   	navigator.mediaDevices.getUserMedia({ video: true })
 			    	 .then(function(stream) {	
-					const mediaRecorder = new MediaRecorder(stream, recorderOptions);
-					mediaRecorder.start(1000); // 1000 - the number of milliseconds to record into each Blob
-					mediaRecorder.ondataavailable = (event) => { 
-					  	if (event.data && event.data.size > 0) {
-					    		socket.send(event.data);
-					  	}
-					}; 
+					//const mediaRecorder = new MediaRecorder(stream, recorderOptions);
+					//mediaRecorder.start(1000); // 1000 - the number of milliseconds to record into each Blob
+					//mediaRecorder.ondataavailable = (event) => { 
+					//  	if (event.data && event.data.size > 0) {
+					//    		socket.send(event.data);
+					//  	}
+					//}; 
 
-				        //video.srcObject = stream;
-				        //video.play();
+				        video.srcObject = stream;
+				        video.play();
 				    }); 
 			}
 			go();

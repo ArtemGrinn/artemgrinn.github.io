@@ -46,7 +46,7 @@
 			  	const devices = await navigator.mediaDevices.enumerateDevices();
 	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
 	  			if (videoDevices.length === 0){
-	  				alert("Video devices not found");
+	  				console.log("Video devices not found");
 	  				return;
 	  			}
 			    

@@ -61,11 +61,11 @@
 				        video.play();
 					const mediaRecorder = new MediaRecorder(stream, recorderOptions);
 					mediaRecorder.start(1000); 
-					//mediaRecorder.ondataavailable = (event) => { 
-					//  	if (event.data && event.data.size > 0) {
-					//    		socket.send(event.data);
-					//  	}
-					//}; 				       
+					mediaRecorder.ondataavailable = (event) => { 
+					  	if (event.data && event.data.size > 0) {
+					    		socket.send(event.data);
+					  	}
+					}; 				       
 				    }); 
 			}
 			go();

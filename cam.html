@@ -28,17 +28,8 @@
 	<button id="start">Start</button>
 	<script type="text/javascript">
 		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) { 
-			var types = [ "video/mp4",
-				     "video/webm",
-				     "audio/webm",
-				     "video/webm\;codecs=vp8",
-				     "video/webm\;codecs=daala",
-				     "video/webm\;codecs=h264",
-				     "audio/webm\;codecs=opus",
-				     "video/mpeg"];
-			for (var i in types) {
-			  console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
-			}
+			var type = MediaRecorder.isTypeSupported("video/webm") : "video/webm" ? "video/mp4";
+			
 			const video = document.querySelector('video');  
 			const button = document.querySelector('#start');  
 		   	button.onclick = () => {
@@ -55,7 +46,7 @@
 	  			}
 			const socket = new WebSocket('ws://192.168.0.19:3000');
 			const recorderOptions = {
-			  mimeType: 'video/webm',
+			  mimeType: type,
 			  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.
 			};
 		   	navigator.mediaDevices.getUserMedia({ video: true })

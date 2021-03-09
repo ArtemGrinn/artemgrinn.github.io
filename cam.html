@@ -35,12 +35,14 @@
 	</div>
 	<button id="start">Start</button>
 	<script type="text/javascript">
-		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
-		  	console.log("Let's get this party started") ;
+		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) { 
+			const video = document.querySelector('video');  
+			const button = document.querySelector('#start');  
+		   	button.onclick = () => {
+		   		video.play();
+		   		alert("Started");
+		   	};
  			const go = async () => {
-				const video = document.querySelector('video');  
-				  
-			  
 			  	const devices = await navigator.mediaDevices.enumerateDevices();
 	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
 	  			if (videoDevices.length === 0){

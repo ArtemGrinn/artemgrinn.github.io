@@ -44,7 +44,7 @@
 	  				console.log("Video devices not found");
 	  				return;
 	  			}
-			const socket = new WebSocket('ws://192.168.0.19:3000');
+			const socket = new WebSocket('wss://webrtc-server2.herokuapp.com:51375');
 			const recorderOptions = {
 			  mimeType: type,
 			  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.

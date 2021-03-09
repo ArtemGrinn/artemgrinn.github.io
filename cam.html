@@ -52,6 +52,20 @@
 			    
 			    navigator.mediaDevices.getUserMedia({ video: true })
 			    	.then(function(stream) {
+			    		const socket = new WebSocket('ws://192.168.0.19:3000');
+						const recorderOptions = {
+						  mimeType: 'video/webm',
+						  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.
+						};
+					 
+				        const mediaRecorder = new MediaRecorder(stream, recorderOptions);
+						mediaRecorder.start(1000); // 1000 - the number of milliseconds to record into each Blob
+						mediaRecorder.ondataavailable = (event) => { 
+						  if (event.data && event.data.size > 0) {
+						    socket.send(event.data);
+						  }
+						}; 
+
 				        video.srcObject = stream;
 				        video.play();
 				    }); 

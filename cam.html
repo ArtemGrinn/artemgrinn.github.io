@@ -26,45 +26,8 @@
 	    <video autoplay playsinline muted></video> 
 	</div>
 	<button id="start">Start</button>
+	<div id="log"></div>
 	<script type="text/javascript">
-		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) { 
-			var type = MediaRecorder.isTypeSupported("video/webm") ? "video/webm" : "video/mp4";
-			
-			const video = document.querySelector('video');  
-			const button = document.querySelector('#start');  
-		   	button.onclick = () => {
-		   		video.play();
-		   		console.log("Started");
-		   	};
- 			const go = async () => {
-			  	const devices = await navigator.mediaDevices.enumerateDevices();
-	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
-				alert(JSON.stringify(videoDevices));
-	  			if (videoDevices.length === 0){
-	  				console.log("Video devices not found");
-	  				return;
-	  			}
-			const socket = new WebSocket('wss://webrtc-server2.herokuapp.com:16662');
-			const recorderOptions = {
-			  mimeType: type,
-			  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.
-			};
-		   	navigator.mediaDevices.getUserMedia({ video: true })
-			    	 .then(function(stream) {	
-				 	video.srcObject = stream;
-				        video.play();
-					const mediaRecorder = new MediaRecorder(stream, recorderOptions);
-					mediaRecorder.start(1000); 
-					mediaRecorder.ondataavailable = (event) => { 
-					  	if (event.data && event.data.size > 0) {
-					    		socket.send(event.data);
-					  	}
-					}; 				       
-				    }); 
-			}
-			go();
-		}
-
 		function getSupportedMimeTypes() {
 		    var VIDEO_TYPES = [
 			"webm",
@@ -105,10 +68,50 @@
 		    });
 		    return supportedTypes;
 		}
-	 	var supportedMimeTypes = getSupportedMimeTypes();
-	    	var log = document.createElement("div");
-	    	log.innerHTML = supportedMimeTypes.join("<br/>");
-	    	document.body.appendChild(log);
+		
+		if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) { 
+			var type = MediaRecorder.isTypeSupported("video/webm") ? "video/webm" : "video/mp4";
+			
+			const video = document.querySelector('video');  
+			const button = document.querySelector('#start');  
+			const log = document.querySelector('#log');  
+		   	button.onclick = () => {
+		   		video.play();
+		   		console.log("Started");
+		   	};
+ 			const go = async () => {
+			  	const devices = await navigator.mediaDevices.enumerateDevices();
+	  			const videoDevices = devices.filter(device => device.kind === 'videoinput');
+				log.innerHTML += JSON.stringify(videoDevices);
+	  			if (videoDevices.length === 0){
+	  				console.log("Video devices not found");
+	  				return;
+	  			}
+			const socket = new WebSocket('wss://webrtc-server2.herokuapp.com:16662');
+			const recorderOptions = {
+			  mimeType: type,
+			  videoBitsPerSecond: 200000 // 0.2 Mbit/sec.
+			};
+		   	navigator.mediaDevices.getUserMedia({ video: true })
+			    	 .then(function(stream) {	
+				 	video.srcObject = stream;
+				        video.play();
+					const mediaRecorder = new MediaRecorder(stream, recorderOptions);
+					mediaRecorder.start(1000); 
+					mediaRecorder.ondataavailable = (event) => { 
+					  	if (event.data && event.data.size > 0) {
+					    		socket.send(event.data);
+					  	}
+					}; 				       
+				    }); 
+			}
+			go();
+			
+			var supportedMimeTypes = getSupportedMimeTypes(); 
+			log.innerHTML += supportedMimeTypes.join("<br/>"); 
+		}
+
+		
 	</script>
 </body>
 </html>

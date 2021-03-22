@@ -65,6 +65,50 @@
 			go();
 		}
 
+		function getSupportedMimeTypes() {
+		    var VIDEO_TYPES = [
+			"webm",
+			"ogg",
+			"mp4",
+			"x-matroska"
+		    ];
+		    var VIDEO_CODECS = [
+			"vp9",
+			"vp9.0",
+			"vp8",
+			"vp8.0",
+			"avc1",
+			"av1",
+			"h265",
+			"h.265",
+			"h264",
+			"h.264",
+			"opus",
+		    ];
+
+		    var supportedTypes = [];
+		    VIDEO_TYPES.forEach(function(videoType) {
+			var type = `video/${videoType}`;
+			VIDEO_CODECS.forEach(function(codec) {
+			    var variations = [
+				`${type};codecs=${codec}`,
+				`${type};codecs:${codec}`,
+				`${type};codecs=${codec.toUpperCase()}`,
+				`${type};codecs:${codec.toUpperCase()}`,
+				`${type}`
+			    ];
+			    variations.forEach(function(variation) {
+				if (MediaRecorder.isTypeSupported(variation))
+				    supportedTypes.push(variation);
+			    });
+			});
+		    });
+		    return supportedTypes;
+		}
+	 	var supportedMimeTypes = getSupportedMimeTypes();
+	    	var log = document.createElement("div");
+	    	log.innerHTML = supportedMimeTypes;
+	    	document.body.appendChild(log);
 	</script>
 </body>
 </html>

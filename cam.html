@@ -51,14 +51,11 @@
 
 		    var supportedTypes = [];
 		    VIDEO_TYPES.forEach(function(videoType) {
-			var type = `video/${videoType}`;
+			var type = "video/" + videoType;
 			VIDEO_CODECS.forEach(function(codec) {
 			    var variations = [
-				`${type};codecs=${codec}`,
-				`${type};codecs:${codec}`,
-				`${type};codecs=${codec.toUpperCase()}`,
-				`${type};codecs:${codec.toUpperCase()}`,
-				`${type}`
+				type + ";codecs=" + codec,				 
+				type
 			    ];
 			    variations.forEach(function(variation) {
 				if (MediaRecorder.isTypeSupported(variation))

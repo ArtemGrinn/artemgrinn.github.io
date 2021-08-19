@@ -69,12 +69,19 @@
             <li class="glide__slide">4</li>
           </ul>
         </div>
-    
-      </div>
+		    <div class="glide__bullets" data-glide-el="controls[nav]"> 
+		      <button class="glide__bullet" data-glide-dir="=0"></button>
+			    <button class="glide__bullet" data-glide-dir="=1"></button>
+			    <button class="glide__bullet" data-glide-dir="=2"></button>
+			    <button class="glide__bullet" data-glide-dir="=3"></button>
+			    <button class="glide__bullet" data-glide-dir="=4"></button>
+		    </div>
+		    
+    </div>
   </div>
 	<script>
 	  new Glide('.glide', {
-		  perView: 3,
+		  perView: 3,  
 	    peek: 50,
 		  autoplay: 2000,
 		  hoverpause: true,

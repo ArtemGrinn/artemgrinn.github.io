@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide DEMO</title>
+	<style>
+		body {
+		  font-family: sans-serif;
+		}
+
+		.glide {
+		  display: flex;
+		  align-items: center;
+		}
+
+		.glide__track {
+		  flex: 1;
+		}
+
+		.glide__slide {
+		  text-align: center;
+		  height: 150px;
+		  line-height: 150px;
+		  color: #fff;
+		  background: rgb(136, 133, 133);
+		  font-size: 1em;
+		  font-weight: 900;
+		}
+
+		.glide__slide[class*="active"] {
+		  background: linear-gradient(-45deg, #ed145b, #7b31f4);
+		}
+
+		.glide__arrows {
+		  padding: 5px;
+		}
+
+		.glide__arrow {
+		  position: relative;
+		  top: 0;
+		  margin: 0;
+		  transform: none;
+		  left: 0;
+		  right: 0;
+		  padding: 5px;
+		  background-color: #818999;
+		  transition: all 0.2s ease-in-out;
+		}
+
+		.glide__arrow:hover {
+		  background-color: #ed145b;
+		}	 
+	</style>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+</head>
+<body>
+ 	<div id="app">
+      <div class="glide">
+        
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">0</li>
+            <li class="glide__slide">1</li>
+            <li class="glide__slide">2</li>
+          </ul>
+        </div>
+    
+      </div>
+    </div>
+	<script>
+	  new Glide('.glide', {
+		  perView: 3,
+		  breakpoints: {
+		    1024: {
+		      perView: 2
+		    },
+		    600: {
+		      perView: 1
+		    }
+		  }
+		}).mount();
+	</script>
+</body>
+</html>

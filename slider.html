@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title>Slide DEMO</title>
-	<style>
+ 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css">
+	<style type="text/css">
 		body {
 		  font-family: sans-serif;
 		}
@@ -48,12 +51,13 @@
 
 		.glide__arrow:hover {
 		  background-color: #ed145b;
-		}	 
+		}
+
 	</style>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </head>
 <body>
- 	<div id="app">
+ 	<div>
       <div class="glide">
         
         <div class="glide__track" data-glide-el="track">
@@ -65,10 +69,12 @@
         </div>
     
       </div>
-    </div>
+  </div>
 	<script>
 	  new Glide('.glide', {
 		  perView: 3,
+		  autoplay: 2000,
+		  hoverpause: true,
 		  breakpoints: {
 		    1024: {
 		      perView: 2

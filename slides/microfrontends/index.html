@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>микро фронтенды</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/Serif.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p>микро</p>
+					<h1>фронтенды</h1>
+				</section>
+				<section>
+					<section>
+						<h2>Коротко о себе</h2>
+					</section>
+					<section>
+						<h3>Артём Халецкий</h3>
+						<p class="fragment">Веб-разработчик<br/><br/></p>
+						<p class="fragment">other 10 лет опыта,</p>
+						<p class="fragment">пишу на React для веба,</p>
+						<p class="fragment">на React Native для мобилок,</p>
+						<p class="fragment">и на C# .Net Core для бека,</p>
+						<p class="fragment">еще делал OrelJS...</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>План на сегодня</h2>
+					</section>
+					<section>
+						<ol>
+							<li>Зачем нам микрофронтенды?</li>
+							<li class="fragment">Обзор возможных решений</li>
+							<li class="fragment">Webpack Module Federation</li>
+							<li class="fragment">Demo</li>
+							<li class="fragment">Полезные ссылки</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+				<section>
+					<h2>1. Зачем нам микрофронтенды?</h2>
+				</section>
+				<section data-transition="zoom">
+					<p>Если у вас над проектом работает одна команда -
+						<span style="display: inline-block;" class="fragment"> НЕЗАЧЕМ</span>
+					</p>
+					<p class="fragment">
+						<img height="238" data-src="assets/paraparapam.png" alt="paraparapam">
+					</p>
+				</section>
+				<section>
+				<p class="fragment">Но, если параллельно работают несколько команд, тогда есть плюсы:</p>
+				<ul>
+					<li class="fragment">Слабая связанность</li>
+					<li class="fragment">Меньше кодовая база - проще поддерживать даже новичкам (1 репо - 1 сервис)</li>
+					<li class="fragment">Быстрая сборка и деплой</li>
+					<li class="fragment">Проще тестировать (независимо от других команд)</li>
+				</ul>
+				</section>
+				<section>
+					<ul>
+						<li>Изоляция ошибок - приложение не падает полностью</li>
+						<li class="fragment">Легко делать частичный релиз или проводить A/B тестирование</li>
+						<li class="fragment">Каждый сервис можно писать на разных фреймворках и языках</li>
+					</ul>
+				</section>
+				<section>
+					<p>Есть одно НО, о котором нужно помнить.</p>
+					<p class="fragment">
+						У микрофронтендов нет полной изоляции -
+						<span style="display: inline-block;" class="fragment fade-right"> общий дом,</span>
+						<span style="display: inline-block;" class="fragment fade-right"> события,</span>
+						<span style="display: inline-block;" class="fragment fade-right"> event loop,</span>
+						<span style="display: inline-block;" class="fragment fade-right"> адресная строка.</span>
+					</p>
+				</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>2. Обзор возможных решений</h2>
+					</section>
+					<section>
+						<p>
+							<img data-src="assets/code-splitting.png" alt="code-splitting">
+						</p>
+					</section>
+					<section>
+						<ul>
+							<li>
+								iframe
+								<span style="display: inline-block;" class="fragment fade-left">
+									<img style="margin: 0 20px;" height="60" data-src="assets/trollolo.png" alt="paraparapam"/>
+								</span>
+							</li>
+							<li class="fragment">SSI (Server Side Includes)</li>
+							<li class="fragment">Linked Spa Pages (<a href="https://nextjs.org/docs/pages/building-your-application/deploying/multi-zones">NextJS Multi Zones</a>)</li>
+							<li class="fragment"><a href="https://single-spa.js.org/">Single SPA</a> like Frameworks (<a href="https://piral.io/">Piral</a>, <a href="https://frint.js.org/">Frint</a>, <a href="https://ragu-framework.github.io/">Ragu</a>)</li>
+							<li class="fragment">Webpack Module Federation</li>
+							<li class="fragment">Что-то своё (долго, дорого, ох...но) </li>
+						</ul>
+					</section>
+					<section>
+						<h2>Что-то своё:</h2>
+						<ul>
+							<li>
+								<a href="https://www.youtube.com/watch?v=RcWqY4kcjDY">от Яндекс</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=adgUumoPv6o">от Тиньков</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=KZGVEw8Gqec">от МТС</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=oT3EQiYBhz0">на модулях и веб-компонентах</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=4THE047ZDzE">на Kubernetes</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>3. Webpack Module Federation</h2>
+					</section>
+					<section>
+						<h2>Кто использует?</h2>
+					</section>
+					<section>
+						Netflix ∙
+						Auth0 ∙
+						Best Buy ∙
+						SAP ∙
+						AWS <br/>
+						Adidas ∙
+						Ford ∙
+						JPMorgan ∙
+						Microsoft <br/>
+						Shopify ∙
+						VMware ∙
+						Reddit ∙
+						Digital Ocean <br/>
+						Alibaba ∙
+						Tencent ∙
+						Amazon ∙
+						Sony ∙
+						Paypal <br/>
+						OLX ∙
+						Home Depot ∙
+						Epic Games ∙
+						Verizon <br/>
+						CloudFlare ∙
+						Cisco ∙
+						Business Insider ∙
+						Box.com
+					</section>
+					<section>
+						<h2>В чем фишка?</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Минимум настроек и бейлерплейта</li>
+							<li class="fragment">Переиспользование общих библиотек</li>
+							<li class="fragment">Lazy-loading модулей</li>
+							<li class="fragment">Сборка прямо в браузере</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Диаграммы</h2>
+					</section>
+					<section>
+						<p>
+							<img data-src="assets/host-remote.png" alt="host-remote">
+						</p>
+					</section>
+					<section>
+						<p>
+							<img data-src="assets/diagram-mf.png" alt="diagram-mf">
+						</p>
+					</section>
+					<section>
+						<h2>Как начать использовать?</h2>
+					</section>
+					<section data-visibility="hidden">
+						<p>Host - микрофронт, который загружается первым и может подключать модули из других микрофронтов.</p>
+						<p class="fragment">Remote - микрофронт, который предоставляет модули, но так же как и Host, может подключать модули из других Remote.</p>
+					</section>
+					<section>
+						<h3>Host config</h3>
+						<pre>
+							<code class="hljs javascript" data-trim data-line-numbers="|2|3-6|7-10">
+								new webpack.container.ModuleFederationPlugin({
+									name: 'host',
+									remotes: {
+										app1: 'app1@http://localhost:3001/remoteEntry.js',
+										app2: 'app2@http://localhost:3002/remoteEntry.js',
+									},
+									shared: {
+										react: { singleton: true, eager: true },
+										'react-dom': { singleton: true, eager: true },
+									},
+								}),
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Remote config</h3>
+						<pre>
+							<code class="hljs javascript" data-trim data-line-numbers="|2|3|4-6|7-10">
+								new webpack.container.ModuleFederationPlugin({
+									name: 'app1',
+									filename: 'remoteEntry.js',
+									exposes: {
+										'./Button': './src/components/Button.js',
+									},
+									shared: {
+										react: { singleton: true },
+										'react-dom': { singleton: true },
+									},
+								}),
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Подключение модуля</h3>
+						<pre>
+							<code class="hljs jsx" data-trim data-line-numbers="|2|6-8">
+								import React, { Suspense } from "react";
+								const RemoteButton = React.lazy(() => import("app1/Button"));
+
+								const App = () => {
+									return (
+										<Suspense fallback={'loading...'}>
+											<RemoteButton></RemoteButton>
+										</Suspense>
+									)
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="r-fit-text">4. Demo</h2>
+					<a href="https://github.com">https://github.com</a>
+				</section>
+
+				<section>
+					<section>
+						<h2>5. Полезные ссылки</h2>
+					</section>
+					<section>
+						<ul>
+							<li><a href="https://single-spa.js.org/docs/examples">single-spa examples</a></li>
+							<li class="fragment"><a href="https://github.com/module-federation/module-federation-examples">webpack module-federation examples</a></li>
+							<li class="fragment"><a href="https://github.com/jherr/create-mf-app">create-mf-app cli</a></li>
+							<li class="fragment"><a href="https://github.com/module-federation/federation-dashboard">module-federation dashboard</a></li>
+							<li class="fragment"><a href="https://github.com/originjs/vite-plugin-federation">vite federation</a></li>
+							<li class="fragment"><a href="https://github.com/module-federation/rollup-federation">rollup federation</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Есть вопросы?</h2>
+				</section>
+				<section>
+					<h2>Спасибо, Orel Codes!</h2>
+					qr-код
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

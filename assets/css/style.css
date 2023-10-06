@@ -90,7 +90,7 @@ h2 {
 .profile #avatar {
 	display: inline-block;
 	width: 160px;
-	height: 160px; 
+	height: 160px;
 	margin-bottom: 30px;
 }
 .profile h1 {
@@ -116,18 +116,7 @@ nav.main-nav {
 	text-align: center;
 }
 
-nav.main-nav a {
-	padding: 8px 12px;
-	color: #aaa;
-	font-size: 16px;
-	line-height: 1.35;
-	border-radius: 3px;
-	font-weight: 300;
-	letter-spacing: 0.01em;
-}
-nav.main-nav a:hover{
-	color: #f4d723;
-}
+
 nav.main-nav a .fa{
 	font-size: 26px;
 	vertical-align: top;
@@ -150,13 +139,22 @@ nav.main-nav a:hover img {
 }
 
 a {
+	padding: 8px 12px;
+	color: #aaa;
+	font-size: 16px;
+	line-height: 2;
+	border-radius: 3px;
+	font-weight: 300;
+	letter-spacing: 0.01em;
 	text-decoration: none;
-	color: #f4d723;
 	-webkit-transition: all 0.15s ease;
 	-moz-transition: all 0.15s ease;
 	-ms-transition: all 0.15s ease;
 	-o-transition: all 0.15s ease;
 	transition: all 0.15s ease;
+}
+a:hover{
+	color: #f4d723;
 }
 ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside; line-height:1.7;}

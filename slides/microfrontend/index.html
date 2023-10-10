@@ -22,11 +22,11 @@
 				</section>
 				<section>
 					<section>
-						<h2>Коротко о себе</h2>
+						<h2>Кто этот парень?</h2>
 					</section>
 					<section>
 						<h3>Артём Халецкий</h3>
-						<p class="fragment">Веб-разработчик<br/><br/></p>
+						<p class="fragment">Главный разработчик в Иннотех<br/><br/></p>
 						<p class="fragment">other 10 лет опыта,</p>
 						<p class="fragment">пишу на React для веба,</p>
 						<p class="fragment">на React Native для мобилок,</p>
@@ -41,7 +41,8 @@
 					</section>
 					<section>
 						<ol>
-							<li>Зачем нам микрофронтенды?</li>
+							<li>Что такое микрофронтенды?</li>
+							<li class="fragment">Зачем они нам?</li>
 							<li class="fragment">Обзор возможных решений</li>
 							<li class="fragment">Webpack Module Federation</li>
 							<li class="fragment">Demo</li>
@@ -51,53 +52,61 @@
 				</section>
 
 				<section>
-				<section>
-					<h2>1. Зачем нам микрофронтенды?</h2>
-				</section>
-				<section data-transition="zoom">
-					<p>Если у вас над проектом работает одна команда -
-						<span style="display: inline-block;" class="fragment"> НЕЗАЧЕМ</span>
-					</p>
-					<p class="fragment">
-						<img height="238" data-src="assets/paraparapam.png" alt="paraparapam">
-					</p>
-				</section>
-				<section>
-				<p class="fragment">Но, если параллельно работают несколько команд, тогда есть плюсы:</p>
-				<ul>
-					<li class="fragment">Слабая связанность</li>
-					<li class="fragment">Меньше кодовая база - проще поддерживать даже новичкам (1 репо - 1 сервис)</li>
-					<li class="fragment">Быстрая сборка и деплой</li>
-					<li class="fragment">Проще тестировать (независимо от других команд)</li>
-				</ul>
-				</section>
-				<section>
-					<ul>
-						<li>Изоляция ошибок - приложение не падает полностью</li>
-						<li class="fragment">Легко делать частичный релиз или проводить A/B тестирование</li>
-						<li class="fragment">Каждый сервис можно писать на разных фреймворках и языках</li>
-					</ul>
-				</section>
-				<section>
-					<p>Есть одно НО, о котором нужно помнить.</p>
-					<p class="fragment">
-						У микрофронтендов нет полной изоляции -
-						<span style="display: inline-block;" class="fragment fade-right"> общий дом,</span>
-						<span style="display: inline-block;" class="fragment fade-right"> события,</span>
-						<span style="display: inline-block;" class="fragment fade-right"> event loop,</span>
-						<span style="display: inline-block;" class="fragment fade-right"> адресная строка.</span>
-					</p>
-				</section>
-				</section>
-
-				<section>
 					<section>
-						<h2>2. Обзор возможных решений</h2>
+						<h2>Что такое микрофронтенды?</h2>
 					</section>
 					<section>
 						<p>
 							<img data-src="assets/code-splitting.png" alt="code-splitting">
 						</p>
+						<p class="fragment">
+							Как микросервисы, только на фронте
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Зачем они нам?</h2>
+					</section>
+					<section data-transition="zoom">
+						<p>Если над проектом работает один разработчик или одна команда
+							<span style="display: inline-block;" class="fragment">НЕЗАЧЕМ</span>
+						</p>
+						<p class="fragment">
+							<img height="238" data-src="assets/paraparapam.png" alt="paraparapam">
+						</p>
+					</section>
+					<section>
+					<p class="fragment">Если параллельно работают <br/> несколько команд, тогда есть плюсы:</p>
+					<ul>
+						<li class="fragment">Слабая связанность, как команд так и кода</li>
+						<li class="fragment">Меньше кодовая база - проще поддерживать даже новичкам </li>
+						<li class="fragment">Быстрая сборка и деплой</li>
+						<li class="fragment">Проще тестировать (независимо от других команд)</li>
+					</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Изоляция ошибок - приложение не падает полностью</li>
+							<li class="fragment">Легко делать частичный релиз или проводить A/B тестирование</li>
+							<li class="fragment">Каждый сервис можно писать на разных фреймворках и языках</li>
+						</ul>
+					</section>
+					<section>
+						<p>Есть одно НО, о котором нужно помнить.</p>
+						<p class="fragment">
+							У микрофронтендов нет полной изоляции
+							<span style="display: inline-block;" class="fragment fade-right"> общий дом,</span>
+							<span style="display: inline-block;" class="fragment fade-right"> события,</span>
+							<span style="display: inline-block;" class="fragment fade-right"> event loop,</span>
+							<span style="display: inline-block;" class="fragment fade-right"> адресная строка.</span>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Обзор возможных решений</h2>
 					</section>
 					<section>
 						<ul>
@@ -111,7 +120,7 @@
 							<li class="fragment">Linked Spa Pages (<a href="https://nextjs.org/docs/pages/building-your-application/deploying/multi-zones">NextJS Multi Zones</a>)</li>
 							<li class="fragment"><a href="https://single-spa.js.org/">Single SPA</a> like Frameworks (<a href="https://piral.io/">Piral</a>, <a href="https://frint.js.org/">Frint</a>, <a href="https://ragu-framework.github.io/">Ragu</a>)</li>
 							<li class="fragment">Webpack Module Federation</li>
-							<li class="fragment">Что-то своё (долго, дорого, ох...но) </li>
+							<li class="fragment">Что-то своё (долго, дорого, ) </li>
 						</ul>
 					</section>
 					<section>
@@ -138,7 +147,7 @@
 
 				<section>
 					<section>
-						<h2>3. Webpack Module Federation</h2>
+						<h2>Webpack Module Federation</h2>
 					</section>
 					<section>
 						<h2>Кто использует?</h2>
@@ -186,11 +195,13 @@
 						<h2>Диаграммы</h2>
 					</section>
 					<section>
+						Host и Remote приложения
 						<p>
 							<img data-src="assets/host-remote.png" alt="host-remote">
 						</p>
 					</section>
 					<section>
+						Shared modules
 						<p>
 							<img data-src="assets/diagram-mf.png" alt="diagram-mf">
 						</p>
@@ -201,6 +212,25 @@
 					<section data-visibility="hidden">
 						<p>Host - микрофронт, который загружается первым и может подключать модули из других микрофронтов.</p>
 						<p class="fragment">Remote - микрофронт, который предоставляет модули, но так же как и Host, может подключать модули из других Remote.</p>
+					</section>
+
+					<section>
+						<h3>Remote config</h3>
+						<pre>
+							<code class="hljs javascript" data-trim data-line-numbers="|2|3|4-6|7-10">
+								new webpack.container.ModuleFederationPlugin({
+									name: 'app1',
+									filename: 'remoteEntry.js',
+									exposes: {
+										'./Button': './src/components/Button.js',
+									},
+									shared: {
+										react: { singleton: true },
+										'react-dom': { singleton: true },
+									},
+								}),
+							</code>
+						</pre>
 					</section>
 					<section>
 						<h3>Host config</h3>
@@ -215,24 +245,6 @@
 									shared: {
 										react: { singleton: true, eager: true },
 										'react-dom': { singleton: true, eager: true },
-									},
-								}),
-							</code>
-						</pre>
-					</section>
-					<section>
-						<h3>Remote config</h3>
-						<pre>
-							<code class="hljs javascript" data-trim data-line-numbers="|2|3|4-6|7-10">
-								new webpack.container.ModuleFederationPlugin({
-									name: 'app1',
-									filename: 'remoteEntry.js',
-									exposes: {
-										'./Button': './src/components/Button.js',
-									},
-									shared: {
-										react: { singleton: true },
-										'react-dom': { singleton: true },
 									},
 								}),
 							</code>
@@ -258,31 +270,54 @@
 				</section>
 
 				<section>
-					<h2 class="r-fit-text">4. Demo</h2>
+					<h2 class="r-fit-text">Demo</h2>
 					<a href="https://github.com">https://github.com</a>
 				</section>
 
 				<section>
 					<section>
-						<h2>5. Полезные ссылки</h2>
+						<h2>Полезные ссылки</h2>
 					</section>
 					<section>
-						<ul>
-							<li><a href="https://single-spa.js.org/docs/examples">single-spa examples</a></li>
-							<li class="fragment"><a href="https://github.com/module-federation/module-federation-examples">webpack module-federation examples</a></li>
-							<li class="fragment"><a href="https://github.com/jherr/create-mf-app">create-mf-app cli</a></li>
-							<li class="fragment"><a href="https://github.com/module-federation/federation-dashboard">module-federation dashboard</a></li>
-							<li class="fragment"><a href="https://github.com/originjs/vite-plugin-federation">vite federation</a></li>
-							<li class="fragment"><a href="https://github.com/module-federation/rollup-federation">rollup federation</a></li>
-						</ul>
+						<div>
+							<a href="https://github.com/jherr/create-mf-app">CLI для создания module-federation приложений</a>
+						</div><br/>
+
+						<div class="fragment">
+							<a href="https://github.com/module-federation/federation-dashboard">Dashboard для MF приложений</a>
+						</div><br/>
+						<div class="fragment">
+							Примеры:<br/>
+							<a href="https://single-spa.js.org/docs/examples">single spa</a><br/>
+							<a href="https://github.com/module-federation/module-federation-examples">webpack module-federation</a>
+						</div><br/>
+
+						<div class="fragment">
+							Реализация Module Federation в других сборщиках
+							<a href="https://github.com/originjs/vite-plugin-federation">vite federation</a><br/>
+							<a href="https://github.com/module-federation/rollup-federation">rollup federation</a><br/>
+						</div>
+
 					</section>
 				</section>
 				<section>
-					<h2>Есть вопросы?</h2>
+					<h2>Есть вопросы к Артёму?</h2>
 				</section>
 				<section>
 					<h2>Спасибо, Orel Codes!</h2>
-					qr-код
+					<br/>
+					<div style="display: inline-block; width: 29%;">
+						Презентация:<br/><br/>
+						<img data-src="assets/qr-code-slides.gif" alt="qr-code">
+					</div>
+					<div style="display: inline-block; width: 29%;">
+						Демо:<br/><br/>
+						<img data-src="assets/qr-code-demo.gif" alt="qr-code">
+					</div>
+					<div style="display: inline-block; width: 29%;">
+						Новости ИТ в Иннотех и Т1:<br/>
+						<img data-src="assets/qr-code-tg.gif" alt="qr-code">
+					</div>
 				</section>
 			</div>
 		</div>
@@ -297,9 +332,11 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				progress: true,
+				slideNumber: "c/t",
+				controlsLayout: 'bottom-right',
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealHighlight ]
 			});
 		</script>
 	</body>

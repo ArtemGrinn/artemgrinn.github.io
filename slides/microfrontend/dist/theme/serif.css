@@ -304,7 +304,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 .reveal a {
   color: var(--r-link-color);
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.15s ease;
 }
 
@@ -348,7 +348,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: var(--r-link-color);
+  color: red;
+  top: 0;
+  bottom: auto;
 }
 
 /*********************************************
